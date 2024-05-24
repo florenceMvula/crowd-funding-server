@@ -22,10 +22,6 @@ export class CreateCampaignDto{
     endDate:string;
 
     @IsNotEmpty()
-    @IsNumber()
-    userId:number;
-
-    @IsNotEmpty()
     @IsString()
     image:string;
 
@@ -35,7 +31,6 @@ export class CreateCampaignDto{
         this.story = d.story;
         this.goal = d.goal;
         this.endDate = d.endDate;
-        this.userId = d.userId;
         this.image = d.image;
     }
 }

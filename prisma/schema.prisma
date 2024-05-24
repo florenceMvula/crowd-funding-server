@@ -19,7 +19,6 @@ model User{
   lastname String
   email String @unique
   password String
-  campaign Campaign[]
 }
 
 model Campaign{
@@ -30,6 +29,4 @@ model Campaign{
   goal Int
   endDate String
   image String
-  userId Int?
-  user User? @relation(fields: [userId],references: [id])
 }

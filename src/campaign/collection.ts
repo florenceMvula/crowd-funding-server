@@ -25,7 +25,6 @@ export class CampaignCollection{
                     goal:Dto.goal,
                     endDate:Dto.endDate,
                     image:Dto.image,
-                    userId:Dto.userId
                 }
             })
 
