@@ -69,22 +69,22 @@ export class CampaignCollection{
         }
     }
 
-    async GetCampaignByUserId(req:Request,res:Response){
-        try {
-            const userid = Number(req.params.userid);
+    // async GetCampaignByUserId(req:Request,res:Response){
+    //     try {
+    //         const userid = Number(req.params.userid);
 
-            const campaign = await prisma.campaign.findMany({
-                where:{
-                    userId:userid
-                }
-            });
+    //         const campaign = await prisma.campaign.findMany({
+    //             where:{
+    //                 userId:userid
+    //             }
+    //         });
 
-            return res.status(StatusCodes.ACCEPTED).json(campaign);
-        } catch (error:any) {
-            return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-                "message": "something went wrong",
-                error: error.message,
-            })
-        }
-    }
+    //         return res.status(StatusCodes.ACCEPTED).json(campaign);
+    //     } catch (error:any) {
+    //         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+    //             "message": "something went wrong",
+    //             error: error.message,
+    //         })
+    //     }
+    // }
 }
